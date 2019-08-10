@@ -6,6 +6,8 @@
 
 
 {!! Form::open(['url'=>'dodajFilmExe', 'method'=> 'post', 'enctype'=> 'multipart/form-data']) !!}
+@csrf
+
 
 <!-- IME FILMA -->
 {{ Form::text('imeFilma', '', ['class' => 'form-control','placeholder'=> 'Upišite ime filma' , 'required'=> 'required' ])}}
@@ -35,7 +37,7 @@
 
 <!-- Baner -->
 <label> Naslovnica filma </label> <br>
-<input type="file" name="banner" id="file" required="required">
+<input type="file" name="image" id="image" required="required">
 <br> <br>
 
 {{Form::submit('Dodaj',['class'=>'btn btn-primary'])}}
