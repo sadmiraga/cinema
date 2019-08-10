@@ -1,0 +1,42 @@
+
+
+<h1> Dodaj Film </h1>
+
+<br> <br>
+
+
+{!! Form::open(['url'=>'dodajFilmExe', 'method'=> 'post', 'enctype'=> 'multipart/form-data']) !!}
+
+<!-- IME FILMA -->
+{{ Form::text('imeFilma', '', ['class' => 'form-control','placeholder'=> 'Upišite ime filma' , 'required'=> 'required' ])}}
+<br>
+
+<!-- trajanje filma -->
+{{ Form::number('trajanjeFilma', '', ['class'=> 'form-control', 'placeholder'=> 'trajanje filma u MIN', 'required'=> 'required'])}}
+<br>
+
+<!-- Opis filma -->
+{{ Form::textarea( 'opisFilma', '', ['class'=>'form-control', 'placeholder'=>'Kratak opis filma', 'rows'=>'5', 'cols' => '20' ])}}
+<br>
+
+<!-- Trailer -->
+{{ Form::text( 'trailerFilma', '', ['class'=> 'form-control' , 'placeholder'=> 'link trailera filma', 'required'=> 'required' ])}}
+<br>
+
+<!-- Da li je za odrasle -->
+{{ Form::radio('over18', 'yes', false)}}
+<span> Za starije od 18 godina </span>
+
+<br>
+
+{{ Form::radio('over18', 'no', true)}}
+<span> Za sve uzraste </span>
+<br> <br>
+
+<!-- Baner -->
+<label> Naslovnica filma </label> <br>
+<input type="file" name="banner" id="file" required="required">
+<br> <br>
+
+{{Form::submit('Dodaj',['class'=>'btn btn-primary'])}}
+{!! Form::close() !!}
