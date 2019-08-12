@@ -13,7 +13,7 @@ class moviesController extends Controller
         return view('admin.addMovie');
     }
 
-
+    //dodaj novi film
     public function addMovieExe(Request $request)
     {
 
@@ -45,10 +45,30 @@ class moviesController extends Controller
         return redirect()->back();
     }
 
+    //prikazi sve filmove
     public function showMovies()
     {
         $movies = movies::all();
 
         return view('movies')->with('movies', $movies);
+    }
+
+    //izbrisi film
+    public function deleteMovie($movie_id)
+    {
+        //provjeriti da li je admin u pitanju
+        //provjeriti da li se brise film koji je vec zakazan da se prikazuje
+
+        //provjeriti da li taj film postoji
+        $movieExistCount = movies::where('id', $movie_id)->get();
+
+        if (count($movieExistCount) == 0) {
+            return redirect()->back();
+        }
+
+        //izbrisati film
+        $movie = movies::findOrFail($movie_id);
+        $movie->delete();
+        return redirect()->back();
     }
 }

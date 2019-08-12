@@ -29,7 +29,7 @@
         @endif
 
         <br>
-        <button> Izbriši film </button>
+        <button onclick="location.href='/izbrisiFilm/{{$movie->id}}';"> izbrisi </button>
 
 
 

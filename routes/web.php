@@ -25,3 +25,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/dodajFilmExe', 'moviesController@addMovieExe');
 
 Route::get('/filmovi', 'moviesController@showMovies');
+
+Route::get('/izbrisiFilm/{movie_id}', 'moviesController@deleteMovie');
