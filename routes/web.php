@@ -23,3 +23,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/dodajFilmExe', 'moviesController@addMovieExe');
+
+Route::get('/filmovi', 'moviesController@showMovies');

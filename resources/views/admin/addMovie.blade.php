@@ -26,12 +26,12 @@
 <br>
 
 <!-- Da li je za odrasle -->
-{{ Form::radio('over18', 'yes', false)}}
+{{ Form::radio('over18', '1', false)}}
 <span> Za starije od 18 godina </span>
 
 <br>
 
-{{ Form::radio('over18', 'no', true)}}
+{{ Form::radio('over18', '0', true)}}
 <span> Za sve uzraste </span>
 <br> <br>
 

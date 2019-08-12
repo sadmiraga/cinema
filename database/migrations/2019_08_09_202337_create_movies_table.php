@@ -24,7 +24,9 @@ class CreateMoviesTable extends Migration
 
 
             // is it movie for adults?
-            $table->boolean('over18')->default(false);
+            $table->integer('over18')->default(0);
+            // 1 - for older than 18
+            // 0 - for everybody
 
             //zanr ID
 

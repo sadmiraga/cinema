@@ -13,6 +13,7 @@ class moviesController extends Controller
         return view('admin.addMovie');
     }
 
+
     public function addMovieExe(Request $request)
     {
 
@@ -22,6 +23,9 @@ class moviesController extends Controller
         $movie->movieName = $request->input('imeFilma');
         $movie->movieDuration = $request->input('trajanjeFilma');
         $movie->description = $request->input('opisFilma');
+        $movie->over18 = $request->input('over18');
+
+        //TRAILER
         $movie->trailer = $request->input('trailerFilma');
 
         //PICTURE, move to folder and get name of picture
@@ -39,5 +43,12 @@ class moviesController extends Controller
         $movie->save();
 
         return redirect()->back();
+    }
+
+    public function showMovies()
+    {
+        $movies = movies::all();
+
+        return view('movies')->with('movies', $movies);
     }
 }
