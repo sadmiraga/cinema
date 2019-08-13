@@ -27,3 +27,5 @@ Route::post('/dodajFilmExe', 'moviesController@addMovieExe');
 Route::get('/filmovi', 'moviesController@showMovies');
 
 Route::get('/izbrisiFilm/{movie_id}', 'moviesController@deleteMovie');
+
+Route::get('/dodajGledanje/{movie_id}', 'moviesController@addToSchedule');

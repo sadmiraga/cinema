@@ -9,6 +9,10 @@
         {{$movie->movieName}} <br>
         </strong>
 
+        <!-- PICTURE -->
+        <img src="{{ URL::to('images')}}/{{$movie->picture}}" alt="error: Picture missing" height="300" width="300" >
+        <br>
+
         <!-- Duration -->
         <label> Trajanje: </label>
         {{$movie->movieDuration}} <label> min </label>
@@ -32,6 +36,8 @@
         <br>
         <button onclick="location.href='/izbrisiFilm/{{$movie->id}}';"> izbrisi </button>
 
+        <!-- Add movie to schedule -->
+        <button onclick="location.href='/dodajGledanje/{{$movie->id}}';"> Dodaj na raspored </button>
 
 
     <br> <br> <hr>

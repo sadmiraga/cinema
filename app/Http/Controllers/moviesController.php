@@ -13,7 +13,7 @@ class moviesController extends Controller
         return view('admin.addMovie');
     }
 
-    //dodaj novi film
+    //ADD NEW MOVIE
     public function addMovieExe(Request $request)
     {
 
@@ -45,7 +45,7 @@ class moviesController extends Controller
         return redirect()->back()->with('SuccessMessage', 'Uspijesno ste dodali novi film u kolekciju');
     }
 
-    //prikazi sve filmove
+    //SHOW ALL MOVIES
     public function showMovies()
     {
         $movies = movies::all();
@@ -53,7 +53,7 @@ class moviesController extends Controller
         return view('movies')->with('movies', $movies);
     }
 
-    //izbrisi film
+    //DELETE MOVIE
     public function deleteMovie($movie_id)
     {
         //provjeriti da li je admin u pitanju
@@ -70,5 +70,11 @@ class moviesController extends Controller
         $movie = movies::findOrFail($movie_id);
         $movie->delete();
         return redirect()->back();
+    }
+
+    //add to Schedule
+    public function addToSchedule($movie_id)
+    {
+        return view('admin.addToSchedule')->with('movie_id', $movie_id);
     }
 }
