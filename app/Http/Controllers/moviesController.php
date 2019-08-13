@@ -42,7 +42,7 @@ class moviesController extends Controller
         //sacuvaj podatke
         $movie->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('SuccessMessage', 'Uspijesno ste dodali novi film u kolekciju');
     }
 
     //prikazi sve filmove

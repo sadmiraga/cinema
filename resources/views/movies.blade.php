@@ -28,6 +28,7 @@
             {{'Ovaj film nije preporucen za osobe mladje od 18 godina'}}
         @endif
 
+        <!-- Delete Movie -->
         <br>
         <button onclick="location.href='/izbrisiFilm/{{$movie->id}}';"> izbrisi </button>
 

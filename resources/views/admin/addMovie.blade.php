@@ -42,3 +42,13 @@
 
 {{Form::submit('Dodaj',['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
+
+
+<!-- Message about success -->
+@if(Session::has('SuccessMessage'))
+    <div class="alert alert-success">
+        {{Session::get('SuccessMessage')}}
+    </div>
+@endif
+
+<button id="dugme" class="btn btn-primary"> OK </button>
