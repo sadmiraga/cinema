@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+//home page
+Route::get('/', 'moviesController@index');
 
 
 Route::get('/dodajFilm', 'moviesController@add');
@@ -22,10 +23,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/dodajFilmExe', 'moviesController@addMovieExe');
-
 Route::get('/filmovi', 'moviesController@showMovies');
 
 Route::get('/izbrisiFilm/{movie_id}', 'moviesController@deleteMovie');
 
 Route::get('/dodajGledanje/{movie_id}', 'moviesController@addToSchedule');
+
+
+
+
+//POST routes
+
+//executing the form for adding schedule
+Route::post('/dodajGledanjeExe', 'watchingController@addWatching');
+
+//execute the form for adding movies
+Route::post('/dodajFilmExe', 'moviesController@addMovieExe');

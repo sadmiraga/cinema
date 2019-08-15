@@ -5,9 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\movies;
+use App\watching;
 
 class moviesController extends Controller
 {
+    public function index()
+    {
+        //get all watchings
+        $watchings = watching::all();
+
+        return view('homePage')->with('watchings', $watchings);
+    }
+
     public function add()
     {
         return view('admin.addMovie');

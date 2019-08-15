@@ -50,5 +50,3 @@
         {{Session::get('SuccessMessage')}}
     </div>
 @endif
-
-<button id="dugme" class="btn btn-primary"> OK </button>
