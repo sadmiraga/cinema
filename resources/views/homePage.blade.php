@@ -36,10 +36,94 @@
     <!-- TICKET PRICE -->
     <label> Cijene Karte: </label> {{$watching->ticketPrice}} <label> KM </label> <br>
 
-    <!-- DATE & TIME -->
-    <label> Datum i vrijeme: </label>
-    {{$watching->watchingTimestamp}}
+    <?php
 
+        $data = $watching->watchingTimestamp;
+
+        //spit date and time
+        $dateAndTime = explode(" ", $data);
+
+        //Format date output
+        $date = $dateAndTime[0];
+        $dateNew = explode("-", $date);
+        $year = $dateNew[0];
+        $month = $dateNew[1];
+        $day = $dateNew[2];
+
+        //name of the month
+        switch ($month) {
+            case '1':
+                $wordMonth = 'Januar';;
+                break;
+
+            case '2':
+                $wordMonth = 'Februar';
+                break;
+
+            case '3':
+                $wordMonth = 'Mart';
+                break;
+
+            case '4':
+                $wordMonth = 'April';
+                break;
+
+            case '5':
+                $wordMonth = 'Maj';
+                break;
+
+            case '6':
+                $wordMonth = 'Junij';
+                break;
+
+            case '7':
+                $wordMonth = 'Julij';
+                break;
+
+            case '8':
+                $wordMonth = 'August';
+                break;
+
+            case '9':
+                $wordMonth = 'Septembar';
+                break;
+
+            case '10':
+                $wordMonth = 'Oktobar';
+                break;
+
+            case '11':
+                $wordMonth = 'Novembar';
+                break;
+
+            case '12':
+                $wordMonth = 'Decembar';
+                break;
+
+            default:
+                $wordMonth = 'Error';
+                break;
+        }
+
+        //format time
+        $time = $dateAndTime[1];
+        $timeNew = explode(":", $time);
+        $hour = $timeNew[0];
+        $minute = $timeNew[1];
+
+    ?>
+
+    <!-- calendar icon -->
+    <i class="fas fa-calendar-alt"></i>
+    <label>
+        {{$day.'.'.$wordMonth.' '.$year}}
+    </label> <br>
+
+    <!-- Clock icon -->
+    <i class="fas fa-clock"></i>
+    <label>
+        {{$hour.":".$minute}}
+    </label>
 
 <hr>
 @endforeach
