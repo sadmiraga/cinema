@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 
 <div id="successMessages">
     @if(isset($successMessage))
@@ -31,3 +34,4 @@
 
 {!! Form::close() !!}
 
+@endsection

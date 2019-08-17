@@ -17,19 +17,19 @@
 Route::get('/', 'moviesController@index');
 
 
-Route::get('/dodajFilm', 'moviesController@add');
+Route::get('/dodajFilm', 'moviesController@add')->name('dodajFilm');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/filmovi', 'moviesController@showMovies');
+Route::get('/filmovi', 'moviesController@showMovies')->name('filmovi');
 
 Route::get('/izbrisiFilm/{movie_id}', 'moviesController@deleteMovie');
 
 Route::get('/dodajGledanje/{movie_id}', 'moviesController@addToSchedule');
 
-
+Route::get('/adminPanel', 'homeController@adminIndex')->name('adminPanel');
 
 
 //POST routes

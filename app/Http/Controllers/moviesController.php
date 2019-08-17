@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\movies;
 use App\watching;
+use Illuminate\Support\Facades\Auth;
 
 class moviesController extends Controller
 {
@@ -19,13 +20,21 @@ class moviesController extends Controller
 
     public function add()
     {
-        return view('admin.addMovie');
+        if (Auth::guest()) {
+            return view('error');
+        } else {
+            $user = Auth::user();
+            if ($user->role == 1) {
+                return view('admin.addMovie');
+            } else {
+                return view('error');
+            }
+        }
     }
 
     //ADD NEW MOVIE
     public function addMovieExe(Request $request)
     {
-
         //to do: samo ako je prijavljen da moze submitat filmove
 
         $movie = new movies;
@@ -57,9 +66,19 @@ class moviesController extends Controller
     //SHOW ALL MOVIES
     public function showMovies()
     {
-        $movies = movies::all();
-
-        return view('movies')->with('movies', $movies);
+        //check if user is logged in
+        if (Auth::guest()) {
+            return view('error');
+        } else {
+            //check if logged user is admin
+            $user = Auth::user();
+            if ($user->role == 1) {
+                $movies = movies::all();
+                return view('admin.movies')->with('movies', $movies);
+            } else {
+                return view('error');
+            }
+        }
     }
 
     //DELETE MOVIE

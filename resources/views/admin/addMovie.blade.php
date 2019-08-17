@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
 
 <h1> Dodaj Film </h1>
 
@@ -50,3 +52,6 @@
         {{Session::get('SuccessMessage')}}
     </div>
 @endif
+
+
+@endsection

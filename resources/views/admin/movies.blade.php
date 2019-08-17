@@ -1,4 +1,6 @@
+ @extends('layouts.app')
 
+@section('content')
 
 @if(count($movies)>0)
 
@@ -47,3 +49,6 @@
 @else
 <p> Nema filmova na raspolaganju za prikaz </p>
 @endif
+
+
+@endsection
