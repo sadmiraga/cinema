@@ -31,6 +31,8 @@ Route::get('/dodajGledanje/{movie_id}', 'moviesController@addToSchedule');
 
 Route::get('/adminPanel', 'homeController@adminIndex')->name('adminPanel');
 
+//searh route
+Route::get('/searh', 'moviesController@searh')->name('searh');
 
 //POST routes
 

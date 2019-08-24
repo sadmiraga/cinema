@@ -7,17 +7,20 @@ use Illuminate\Http\Request;
 use App\movies;
 use App\watching;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class moviesController extends Controller
 {
+    // all movie watching sessions
     public function index()
     {
         //get all watchings
-        $watchings = watching::all();
+        $watchings = watching::OrderBy('watchingTimestamp', 'ASC')->paginate(2);
 
         return view('homePage')->with('watchings', $watchings);
     }
 
+    //add new movie DESIGN
     public function add()
     {
         if (Auth::guest()) {
@@ -73,7 +76,8 @@ class moviesController extends Controller
             //check if logged user is admin
             $user = Auth::user();
             if ($user->role == 1) {
-                $movies = movies::all();
+                //$movies = movies::all()->orderBy('created_at', 'DESC')->get();
+                $movies = movies::orderBy('created_at', 'DESC')->get();
                 return view('admin.movies')->with('movies', $movies);
             } else {
                 return view('error');
@@ -104,5 +108,20 @@ class moviesController extends Controller
     public function addToSchedule($movie_id)
     {
         return view('admin.addToSchedule')->with('movie_id', $movie_id);
+    }
+
+    //searh function
+    public function searh(Request $request)
+    {
+        $query = request()->input('query');
+
+        //$searhWatching = movies::where('movieName', 'like', "%$query%")->get();
+        $searhWatching = DB::table('movies')
+            ->join('watchings', 'watchings.movie_id', 'movies.id')
+            ->select('*')
+            ->where('movies.movieName', 'like', "%$query%")
+            ->get();
+
+        return view('searh-result')->with('searchResult', $searhWatching);
     }
 }

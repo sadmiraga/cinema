@@ -128,5 +128,8 @@
 <hr>
 @endforeach
 
+{{$watchings->links()}}
+
+
 
 @endsection

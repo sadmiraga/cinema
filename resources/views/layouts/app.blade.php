@@ -67,10 +67,10 @@
 
               </ul>
 
-              <!-- searh -->
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <!-- SEARH FORM -->
+                <form action="{{route('searh')}}" method="GET"  class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" value="{{ request()->input('query') }}" name="query" placeholder="Trazi">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Trazi</button>
               </form>
 
             </div>

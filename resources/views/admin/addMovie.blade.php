@@ -43,6 +43,7 @@
 <br> <br>
 
 {{Form::submit('Dodaj',['class'=>'btn btn-primary'])}}
+
 {!! Form::close() !!}
 
 
