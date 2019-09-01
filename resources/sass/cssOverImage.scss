@@ -1,0 +1,40 @@
+.embed-responsive {
+    position: relative;
+    border: 2px solid black;
+}
+
+.top-right {
+    border-radius: 8px;
+    background-color: #ffffffa6;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 2px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: #ffffffa6;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: #ffffffa6;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #ffffffa6;
+    border-radius: 8px;
+    padding: 2px;
+}

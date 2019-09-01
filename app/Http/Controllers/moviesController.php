@@ -15,7 +15,7 @@ class moviesController extends Controller
     public function index()
     {
         //get all watchings
-        $watchings = watching::OrderBy('watchingTimestamp', 'ASC')->paginate(2);
+        $watchings = watching::OrderBy('watchingTimestamp', 'ASC')->paginate(9);
 
         return view('homePage')->with('watchings', $watchings);
     }
