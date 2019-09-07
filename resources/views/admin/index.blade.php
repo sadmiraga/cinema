@@ -4,14 +4,18 @@
 @section('content')
 
 
-<button class="btn btn-primary" onclick="location.href='/filmovi';">
-    Filmovi
-</button>
 
-<br>
+<div id="container">
 
-<button class="btn btn-primary" onclick="location.href='/dodajFilm';">
-    Dodaj Film
-</button>
+<div onclick="location.href='/filmovi';" id="left">
+    <i class="fas fa-file-video"></i>
+</div>
+
+<div onclick="location.href='/dodajFilm';" id="right">
+    <i class="far fa-plus-square"></i>
+</div>
+
+</div>
+
 
 @endsection
