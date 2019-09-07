@@ -18,7 +18,7 @@ class CreateMoviesTable extends Migration
 
             $table->string('movieName');
             $table->double('movieDuration');
-            $table->longText('description');
+            $table->text('description');
             $table->string('picture');
             $table->string('trailer');
 

@@ -6,17 +6,7 @@
 <div class="col-lg-12">
 <div class="row">
 
-    <script>
-        function showDescription(opis){
-            alert(opis);
-        }
-    </script>
 
-<?php
-    $popupName = " Name test";
-    $popupDescription = "description Test";
-
-?>
 
 @foreach($watchings as $watching)
 
@@ -174,7 +164,16 @@
 
 
 
-            <button class="btn btn-primary" onclick="location.href='#popup1';"> Opis </button>
+
+
+            <div class="movieDescription">
+                <?php echo nl2br($movie->description) ?>
+            </div>
+
+
+
+
+
 
 
 
@@ -189,12 +188,17 @@
 
 
 @endforeach
-<div id="popup1" class="overlay">
+
+
+    <!-- popup message -->
+    <div id="popup1" class="overlay">
         <div class="popup">
-        <h2> {{$popupName}}</h2>
+        <h2 id="popupNameH"> Error </h2>
+
+
             <a class="close" href="#">&times;</a>
             <div class="content">
-                {{$popupDescription}}
+                <p id="popupDescription"> default </p>
             </div>
         </div>
     </div>
