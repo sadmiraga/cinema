@@ -10646,7 +10646,8 @@ a.text-dark:focus {
 
 .embed-responsive {
   position: relative;
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .top-right {
@@ -10688,8 +10689,9 @@ a.text-dark:focus {
 .movieDescription {
   text-align: center;
   height: 150px;
-  border: 2px solid black;
+  border-top: 2px solid black;
   overflow: auto;
+  width: 100%;
 }
 
 .card {
@@ -10748,5 +10750,16 @@ a.text-dark:focus {
 .ticket {
   left: 5%;
   position: absolute;
+}
+
+.card-footer {
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-bottom: 0%;
+}
+
+.card-body {
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
