@@ -80,7 +80,7 @@
     </div>
 
     <!-- footer -->
-    <footer class="footer">
+    <div class="footer">
 
         <!-- Instagram -->
         <a  class="footerLinks" href="https://www.instagram.com/sadmiraga_/">
@@ -104,6 +104,6 @@
                 <i class="fas fa-location-arrow"></i>
         </a>
 
-    </footer>
+    </div>
 </body>
 </html>
