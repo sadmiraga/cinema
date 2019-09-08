@@ -168,7 +168,7 @@
                     <div class="movieDescription">
                         <?php echo nl2br($movie->description) ?>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
 

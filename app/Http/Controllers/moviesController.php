@@ -77,7 +77,7 @@ class moviesController extends Controller
             $user = Auth::user();
             if ($user->role == 1) {
                 //$movies = movies::all()->orderBy('created_at', 'DESC')->get();
-                $movies = movies::orderBy('created_at', 'DESC')->get();
+                $movies = movies::orderBy('created_at', 'DESC')->paginate(9);
                 return view('admin.movies')->with('movies', $movies);
             } else {
                 return view('error');

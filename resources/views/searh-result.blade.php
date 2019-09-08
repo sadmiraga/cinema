@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div id="searchMessage">
+<div class="title">
     <h3> Rezultati za pretragu '{{ request()->input('query') }}' ({{count($searchResult)}}) </h3>
 </div>
 

@@ -10,6 +10,9 @@
 //CSS for addMovie
 @import "addMovie";
 
+//CSS for admin movies and add to schedule
+@import "adminMovies";
+
 .element {
     width: 30%;
     height: 40%;
@@ -68,7 +71,7 @@
     margin-left: 10%;
 }
 
-#searchMessage {
+.title {
     text-align: center;
     width: 60%;
     margin-right: 20%;

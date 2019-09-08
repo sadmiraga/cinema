@@ -10840,6 +10840,28 @@ fieldset {
   }
 }
 
+#deleteAndEditButtons {
+  text-align: center;
+}
+
+.addMovieForm {
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  border: 2px solid black;
+  text-align: center;
+  background-color: grey;
+}
+
+.addMovieInput {
+  background-color: #c0c0c0;
+}
+
+.dugme {
+  background-color: #c0c0c0;
+  margin-bottom: 1%;
+}
+
 .element {
   width: 30%;
   height: 40%;
@@ -10898,7 +10920,7 @@ fieldset {
   margin-left: 10%;
 }
 
-#searchMessage {
+.title {
   text-align: center;
   width: 60%;
   margin-right: 20%;

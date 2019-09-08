@@ -8,30 +8,39 @@
     @endif
 </div>
 
+<div class="title">
+    <h3> Dodaj Film na raspored za gledanje </h3>
+</div>
 
-{!! Form::open(['url'=>'dodajGledanjeExe', 'method'=>'post', ]) !!}
+<div class="addMovieForm">
 
-    <!-- DATUM -->
-        <label> Unesite datum i vrijeme izvođenja filma: </label> <br>
-        <input type="datetime-local"
-               name="dateAndTime"
-               required = "required"
-                > <br> <br>
+    {!! Form::open(['url'=>'dodajGledanjeExe', 'method'=>'post', ]) !!}
 
-    <!-- PRICE of TICKET -->
-        <label>  Unesite cijenu karte za film </label>
-        <input name="price" type="number" required = "required" step="0.1" >
+        <!-- DATUM -->
+            <label> <strong> Unesite datum i vrijeme izvođenja filma: </strong> </label> <br>
+            <input class="addMovieInput" type="datetime-local"
+                name="dateAndTime"
+                required = "required"
+                    > <br> <br>
 
-        <label>
-            KM
-        </label>
+        <!-- PRICE of TICKET -->
+            <label> <strong>  Unesite cijenu karte za film </strong> </label> <br>
+            <input class="addMovieInput" name="price" type="number" required = "required" step="0.1" >
 
-    <!-- MOVIE ID -->
-        <input type="hidden" name="movie_id" value ={{$movie_id}}> <br>
+            <label>
+                <strong>
+                    KM
+                </strong>
+            </label>
 
-    <!-- SUBMIT -->
-        <input type="Submit" value="Dodaj">
+        <!-- MOVIE ID -->
+            <input type="hidden" name="movie_id" value ={{$movie_id}}> <br>
 
-{!! Form::close() !!}
+        <!-- SUBMIT -->
+            <input class="dugme" type="Submit" value="Dodaj">
+
+    {!! Form::close() !!}
+
+</div>
 
 @endsection
