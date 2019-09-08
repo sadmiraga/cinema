@@ -2,8 +2,22 @@
 
 @section('content')
 
+<div id="naslov">
 <h1> Dodaj Film </h1>
+</div>
 
+<div class="uSredini">
+    <div id="notification">
+        <!-- Message about success -->
+        @if(Session::has('SuccessMessage'))
+            <div id="hideMe" class="alert alert-success">
+                {{Session::pull('SuccessMessage')}}
+            </div>
+        @endif
+    </div>
+</div>
+
+<div id="addMovieContainer">
 <br> <br>
 
 
@@ -27,32 +41,43 @@
 {{ Form::text( 'trailerFilma', '', ['class'=> 'form-control' , 'placeholder'=> 'link trailera filma', 'required'=> 'required' ])}}
 <br>
 
+
+
+
 <!-- Da li je za odrasle -->
-{{ Form::radio('over18', '1', false)}}
-<span> Za starije od 18 godina </span>
+<div id="age">
+    <div id="punoljetniContainer">
+        {{ Form::radio('over18', '1', false, array('id'=>'punoljetni'))}}
+        <label class="radioLabel" for="punoljetni"> Za starije od 18 godina </label>
+    </div>
+
+    <div id="zaSveContainer">
+    {{ Form::radio('over18', '0', true, array('id'=>'zaSve'))}}
+    <label class="radioLabel" for="zaSve"> Za sve uzraste </label>
+    </div>
+
+</div>
+
 
 <br>
 
-{{ Form::radio('over18', '0', true)}}
-<span> Za sve uzraste </span>
-<br> <br>
 
 <!-- Baner -->
-<label> Naslovnica filma </label> <br>
+<label> Baner filma </label> <br>
 <input type="file" name="image" id="image" required="required">
-<br> <br>
+<br>
+<br>
+
+
+
 
 {{Form::submit('Dodaj',['class'=>'btn btn-primary'])}}
 
 {!! Form::close() !!}
 
+</div>
 
-<!-- Message about success -->
-@if(Session::has('SuccessMessage'))
-    <div class="alert alert-success">
-        {{Session::get('SuccessMessage')}}
-    </div>
-@endif
+
 
 
 @endsection

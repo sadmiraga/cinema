@@ -7,6 +7,9 @@
 //CSS for admin page
 @import "adminPage";
 
+//CSS for addMovie
+@import "addMovie";
+
 .element {
     width: 30%;
     height: 40%;
@@ -56,4 +59,25 @@
 .card-body {
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+.uSredini {
+    text-align: center;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#searchMessage {
+    text-align: center;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    background-color: grey;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: black;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 2%;
+    border: 2px solid black;
 }

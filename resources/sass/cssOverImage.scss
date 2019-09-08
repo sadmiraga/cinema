@@ -39,3 +39,11 @@
     border-radius: 8px;
     padding: 2px;
 }
+
+.pic img {
+    transition: 0.5s;
+}
+
+.pic:hover img {
+    transform: scale(1.3);
+}

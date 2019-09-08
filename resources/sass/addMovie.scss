@@ -1,0 +1,66 @@
+#addMovieContainer {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+#punoljetniContainer:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+#zaSveContainer:hover {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+#age {
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+fieldset {
+    border: 1px solid black;
+}
+
+#naslov {
+    text-align: center;
+}
+
+#naslov {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.notification {
+    overflow: hidden;
+    position: relative;
+}
+
+#hideMe {
+    -webkit-animation: cssAnimation 3s forwards;
+    animation: cssAnimation 3s forwards;
+}
+
+@keyframes cssAnimation {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -10686,6 +10686,14 @@ a.text-dark:focus {
   padding: 2px;
 }
 
+.pic img {
+  transition: 0.5s;
+}
+
+.pic:hover img {
+  transform: scale(1.3);
+}
+
 .movieDescription {
   text-align: center;
   height: 150px;
@@ -10760,6 +10768,78 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+#addMovieContainer {
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
+}
+
+#punoljetniContainer:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#zaSveContainer:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+#age {
+  width: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+fieldset {
+  border: 1px solid black;
+}
+
+#naslov {
+  text-align: center;
+}
+
+#naslov {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.notification {
+  overflow: hidden;
+  position: relative;
+}
+
+#hideMe {
+  -webkit-animation: cssAnimation 3s forwards;
+  animation: cssAnimation 3s forwards;
+}
+
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .element {
   width: 30%;
   height: 40%;
@@ -10809,5 +10889,26 @@ a.text-dark:focus {
 .card-body {
   padding-top: 2%;
   padding-bottom: 2%;
+}
+
+.uSredini {
+  text-align: center;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#searchMessage {
+  text-align: center;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  background-color: grey;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: black;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  margin-bottom: 2%;
+  border: 2px solid black;
 }
 
