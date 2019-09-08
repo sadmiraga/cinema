@@ -1,0 +1,22 @@
+.footer {
+    background-color: grey;
+    color: white;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    font-size: 250%;
+    display: flex;
+}
+
+.footerLinks {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2%;
+    margin-left: 2%;
+    color: white;
+    text-decoration: none;
+}
+
+.footerLinks:hover {
+    color: black;
+}

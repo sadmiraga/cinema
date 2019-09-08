@@ -80,5 +80,25 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- footer -->
+    <footer class="footer">
+
+        <!-- Instagram -->
+        <a  class="footerLinks" href="https://www.instagram.com/sadmiraga_/">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a  class="footerLinks" href="https://www.facebook.com/sadmir.hasanic.5">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <!-- Email -->
+        <a  class="footerLinks" href="mailto:sadmirvela@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+    </footer>
 </body>
 </html>
