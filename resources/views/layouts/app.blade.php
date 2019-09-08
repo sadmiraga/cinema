@@ -40,9 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">icons</a>
-                </li>
+
 
                 <!-- ADMIN -->
                 @auth
@@ -97,6 +95,13 @@
         <!-- Email -->
         <a  class="footerLinks" href="mailto:sadmirvela@gmail.com">
             <i class="fas fa-envelope"></i>
+        </a>
+
+
+
+        <!--Location -->
+        <a class="footerLinks" href="https://www.google.com/maps/dir/Current+Location/46.362949, 15.124023">
+                <i class="fas fa-location-arrow"></i>
         </a>
 
     </footer>
