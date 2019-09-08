@@ -19,9 +19,9 @@
 
                 <!-- Movie Name -->
                 <div class="card-body">
-                    <h4 class="card-title">
+                    <h3 class="card-title" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                         {{$movie->movieName}}
-                    </h4>
+                    </h3>
                 </div>
 
                 <!-- Main Part -->
@@ -58,11 +58,11 @@
                     </div>
 
                     <div id="deleteAndEditButtons">
-                        <!-- Delete Movie -->
-                        <button class="btn btn-danger" onclick="location.href='/izbrisiFilm/{{$movie->id}}';"> izbrisi </button>
-
                         <!-- Add movie to schedule -->
-                        <button class="btn btn-success" onclick="location.href='/dodajGledanje/{{$movie->id}}';"> Dodaj na raspored </button>
+                        <button class="btn btn-secondary" onclick="location.href='/dodajGledanje/{{$movie->id}}';"> Dodaj na raspored </button>
+
+                        <!-- Delete Movie -->
+                        <button class="btn btn-secondary" onclick="location.href='/izbrisiFilm/{{$movie->id}}';"> izbrisi </button>
                     </div>
 
                     <!-- description -->

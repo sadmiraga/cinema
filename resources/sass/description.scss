@@ -1,13 +1,9 @@
 .movieDescription {
     text-align: center;
     height: 150px;
-    border-top: 2px solid black;
+    border-top: 1px solid white;
     overflow: auto;
     width: 100%;
-}
-
-.card {
-    border: 2px solid black;
 }
 
 .movieDescription::-webkit-scrollbar-track {

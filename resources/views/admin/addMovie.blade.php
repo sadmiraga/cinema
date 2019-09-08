@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div id="naslov">
-<h1> Dodaj Film </h1>
+<div class="title">
+<h3> Dodaj Film </h3>
 </div>
 
 <div class="uSredini">
@@ -71,7 +71,7 @@
 
 
 
-{{Form::submit('Dodaj',['class'=>'btn btn-primary'])}}
+{{Form::submit('Dodaj',['class'=>'btn btn-secondary'])}}
 
 {!! Form::close() !!}
 

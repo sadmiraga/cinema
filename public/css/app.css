@@ -10646,8 +10646,6 @@ a.text-dark:focus {
 
 .embed-responsive {
   position: relative;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
 }
 
 .top-right {
@@ -10697,13 +10695,9 @@ a.text-dark:focus {
 .movieDescription {
   text-align: center;
   height: 150px;
-  border-top: 2px solid black;
+  border-top: 1px solid white;
   overflow: auto;
   width: 100%;
-}
-
-.card {
-  border: 2px solid black;
 }
 
 .movieDescription::-webkit-scrollbar-track {
@@ -10733,10 +10727,10 @@ a.text-dark:focus {
   height: 300px;
   font-size: 800%;
   margin-left: 5%;
-  border-left: 2px solid black;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid #696969;
+  border-top: 1px solid #696969;
+  border-bottom: 1px solid #696969;
+  border-right: 0.5px solid #696969;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -10749,10 +10743,10 @@ a.text-dark:focus {
   height: 300px;
   font-size: 800%;
   margin-right: 5%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-left: 1px solid black;
+  border-top: 1px solid #696969;
+  border-bottom: 1px solid #696969;
+  border-right: 1px solid #696969;
+  border-left: 0.5px solid #696969;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -10838,6 +10832,11 @@ fieldset {
   100% {
     opacity: 0;
   }
+}
+
+.form-control {
+  background-color: #dcdcdc;
+  text-align: center;
 }
 
 #deleteAndEditButtons {
@@ -10931,15 +10930,21 @@ fieldset {
   position: absolute;
 }
 
+.ticketAndDuration {
+  background-color: #dcdcdc;
+}
+
 .card-footer {
   padding-right: 0%;
   padding-left: 0%;
   padding-bottom: 0%;
+  background-color: #dcdcdc;
 }
 
 .card-body {
   padding-top: 2%;
   padding-bottom: 2%;
+  background-color: #dcdcdc;
 }
 
 .uSredini {
@@ -10980,5 +10985,30 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #a9a9a9;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  color: black !important;
+  background-color: #dcdcdc !important;
+  border: 1px solid white !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  background-color: grey !important;
+  color: white !important;
+  cursor: pointer;
+  border: 1px solid white !important;
+}
+
+.pagination span:hover,
+.pagination a:hover {
+  background-color: #a9a9a9 !important;
 }
 

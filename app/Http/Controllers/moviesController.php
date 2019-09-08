@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DateTime;
 
 use App\movies;
 use App\watching;
@@ -14,8 +15,9 @@ class moviesController extends Controller
     // all movie watching sessions
     public function index()
     {
+        $currentTimestamp = new DateTime();
         //get all watchings
-        $watchings = watching::OrderBy('watchingTimestamp', 'ASC')->paginate(9);
+        $watchings = watching::where('watchingTimestamp', '>', $currentTimestamp)->OrderBy('watchingTimestamp', 'ASC')->paginate(9);
 
         return view('homePage')->with('watchings', $watchings);
     }

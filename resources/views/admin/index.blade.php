@@ -3,7 +3,9 @@
 
 @section('content')
 
-
+<div class="title">
+   <h3> Admin Panel </h3>
+</div>
 
 <div id="container">
 

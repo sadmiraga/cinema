@@ -99,9 +99,9 @@
 
                 <!-- Movie Name -->
                 <div class="card-body">
-                    <h4 class="card-title">
+                    <h3  class="card-title" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
                         {{$movie->movieName}}
-                    </h4>
+                    </h3>
                 </div>
 
                 <!-- Main Part -->
@@ -152,17 +152,19 @@
                 <!-- footer -->
                 <div class="card-footer">
 
-                    <div class="ticket">
-                        <!--ticket price -->
-                        <i class="fas fa-ticket-alt"></i>
-                        {{$watching->ticketPrice}} <label> KM </label> <br>
-                    </div>
+                    <div class="ticketAndDuration">
+                        <div class="ticket">
+                            <!--ticket price -->
+                            <i class="fas fa-ticket-alt"></i>
+                            {{$watching->ticketPrice}} <label> KM </label> <br>
+                        </div>
 
-                    <!-- DURATION -->
-                    <div class="duration">
-                        <label> Trajanje: </label> {{$movie->movieDuration}} <label>min </label> <br>
+                        <!-- DURATION -->
+                        <div class="duration">
+                            <label> Trajanje: </label> {{$movie->movieDuration}} <label>min </label> <br>
+                        </div>
+                        <br>
                     </div>
-                    <br>
 
                     <!-- description -->
                     <div class="movieDescription">

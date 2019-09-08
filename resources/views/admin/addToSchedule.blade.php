@@ -8,8 +8,14 @@
     @endif
 </div>
 
+<?php
+    //get name of movie
+    $movie = App\movies::find($movie_id);
+    $ImeFilma = $movie->movieName;
+?>
+
 <div class="title">
-    <h3> Dodaj Film na raspored za gledanje </h3>
+    <h3> Dodaj "{{$ImeFilma}}" na raspored za gledanje </h3>
 </div>
 
 <div class="addMovieForm">
